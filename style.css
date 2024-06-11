@@ -1,0 +1,200 @@
+body {
+    background-color: #F2F2F2;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    margin: 80px auto;
+}
+
+.login{
+    width: 400px;
+    height: 500px;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #D2D2D2;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #e1e1e1;
+    
+}
+
+.login-top{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-top img{
+    width: 200px;
+    margin: 25px;
+}
+
+.login-top h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-top .user-box {
+    position: relative;
+    width: 300px;
+  }
+  
+  .login-top .user-box input {
+    width: 300px;
+    padding: 22px 0 8px 10px;
+    font-size: 13px;
+    color: #000;
+    margin-bottom: 10px;
+    border: none;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    outline: none;
+    background: transparent;
+  }
+  .login-top .user-box label {
+    position: absolute;
+    top:0;
+    left: 10px;
+    padding: 14px 0;
+    font-size: 14px;
+    color: #000;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-top .user-box input:focus ~ label,
+  .login-top .user-box input:valid ~ label {
+    top: -5px;
+    left: 10px;
+    color: #000;
+    font-size: 10px;
+  }
+  
+
+.submit{
+    width:312px;
+    height: 41px;
+    cursor: pointer;
+    background-color: #0597F2;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.contour{
+    width: 312px;
+    margin: 24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.line{
+    width:120px;
+}
+
+.facebook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facebook img{
+    width: 20px;
+    height: 20px;;
+}
+
+.facebook-txt{
+    font-weight: 700;
+    color: #3851A5;
+    margin-left: 10px;
+}
+
+.facebook a:visited{
+    color: #3851A5;
+}
+
+.lost-pwd{
+    font-size: 13px;
+}
+
+.lost-pwd-a:visited{
+    color: #000;
+}
+
+.join{
+    width: 400px;
+    height: 80px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 1px solid #D2D2D2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px #e1e1e1;
+}
+
+.txt{
+    text-align: center;
+}
+
+.txt-blue{
+    font-weight: 700;
+    color:#0095F6;
+}
+
+.txt-blue a:visited{
+    color:#0095F6;
+}
+
+.download{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.store{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.store img{
+    width: 130px;
+    margin-right: 8px;
+}
+
+.footer{
+    font-size: 15px;
+}
+
+.footer ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footer ul li{
+    margin-right: 10px;
+}
+
+.darkmode{
+    cursor: pointer;
+}
