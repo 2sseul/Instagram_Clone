@@ -5,50 +5,73 @@ let userNameValue = false;
 
 let email = document.getElementById('email');
 let named = document.getElementById('name');
-let userName = document.getElementById('user-name');
+let userName = document.getElementById('username');
 let pwd = document.getElementById('pwd');
 
 email.addEventListener('focusout', ()=>{
-    if(email.value.length > 0){
+    if(email.value.length > 4){
         emailValue = true;
     }else{
         emailValue = false;
     }
-})
-
-pwd.addEventListener('focusout', ()=>{
-    if(pwd.value.length > 0){
-        pwdValue = true;
+    if(emailValue && pwdValue && nameValue && userNameValue){
+        joinBtn.style.opacity = "1";
+        joinBtn.style.cursor = "pointer"
     }else{
-        pwdValue = false;
+        joinBtn.style.opacity = "0.6";
+        joinBtn.style.cursor = "default"
     }
 })
 
-named.addEventListener('focusout', ()=>{
-    if(named.value.length > 0){
+named.addEventListener('keyup', ()=>{
+    if(named.value.length > 4){
         nameValue = true;
     }else{
         nameValue = false;
     }
+    if(emailValue && pwdValue && nameValue && userNameValue){
+        joinBtn.style.opacity = "1";
+        joinBtn.style.cursor = "pointer"
+    }else{
+        joinBtn.style.opacity = "0.6";
+        joinBtn.style.cursor = "default"
+    }
 })
 
-userName.addEventListener('focusout', ()=>{
-    if(userName.value.length > 0){
+userName.addEventListener('keyup', ()=>{
+    if(userName.value.length > 4){
         userNameValue = true;
     }else{
         userNameValue = false;
+    }
+    if(emailValue && pwdValue && nameValue && userNameValue){
+        joinBtn.style.opacity = "1";
+        joinBtn.style.cursor = "pointer"
+    }else{
+        joinBtn.style.opacity = "0.6";
+        joinBtn.style.cursor = "default"
     }
 })
 
 let pwdBtn = document.querySelector('.pwd-btn');
 
 pwd.addEventListener('keyup', ()=>{
-    if(pwd.value.length > 0){
+    if(pwd.value.length > 4){
+        pwdValue = true;
         pwdBtn.style.visibility = "visible";
-        }else{
-            pwdBtnSee = false;
-            pwdBtn.style.visibility = "hidden";
-        }
+    }else{
+        pwdValue = false;
+        pwdBtnSee = false;
+        pwdBtn.style.visibility = "hidden";
+    }
+    if(emailValue && pwdValue && nameValue && userNameValue){
+        joinBtn.style.opacity = "1";
+        joinBtn.style.cursor = "pointer"
+    }else{
+        joinBtn.style.opacity = "0.6";
+        joinBtn.style.cursor = "default"
+
+    }
 })
 
 let pwdBtnSee = false;
@@ -66,15 +89,16 @@ pwdBtn.addEventListener('click', (e)=>{
     }
 })
 
-let loginBtn = document.querySelector('.submit');
-let loginForm = document.querySelector('.login-form');
-loginBtn.addEventListener('click', (e)=>{
-    if(idValue && pwdValue){
-        loginForm.submit();
+let joinBtn = document.querySelector('.submit');
+
+let joinForm = document.querySelector('.join-form');
+joinBtn.addEventListener('click', (e)=>{
+    if(emailValue && pwdValue && nameValue && userNameValue){
+        joinForm.submit();
     }else{
         e.preventDefault();
         alert("회원정보를 확인하세요");
-        id.focus();
+        email.focus();
     }
 })
 

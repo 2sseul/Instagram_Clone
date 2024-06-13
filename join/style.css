@@ -30,7 +30,6 @@ a{
     border: 1px solid #D2D2D2;
     border-radius: 5px;
     box-shadow: 2px 2px 5px #e1e1e1;
-    
 }
 
 .join-top{
@@ -137,11 +136,11 @@ a{
 .submit{
     width:312px;
     height: 41px;
-    cursor: pointer;
     background-color: #0597F2;
     color: white;
     border: none;
     border-radius: 3px;
+    opacity: 0.6;
 }
 
 .contour{
