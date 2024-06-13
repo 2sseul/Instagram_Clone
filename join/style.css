@@ -1,0 +1,251 @@
+body{
+    background-color: #F2F2F2;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    margin: 15px auto;
+}
+
+.join-mention{
+    font-size: 14px;
+}
+
+.join{
+    width: 400px;
+    height: 620px;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #D2D2D2;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #e1e1e1;
+    
+}
+
+.join-top{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.join img{
+    width: 180px;
+    margin-bottom: 15px;
+}
+  
+.join-top .user-box, .join-top .user-pwd {
+    position: relative;
+    width: 300px;
+}
+  
+.join-top .user-box input, .join-top .user-pwd input {
+    padding: 22px 0 8px 10px;
+    font-size: 13px;
+    color: #000;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    outline: none;
+    background: transparent;
+}
+
+.join-top .user-box input{
+    width: 300px;
+    border: 1px solid #cdcdcd;
+}
+
+.join-top .user-pwd{
+    width: 310px;
+    height: 45px;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.join-top .user-pwd input{
+    border: none;
+}
+
+ 
+.join-top .user-box .move, .join-top .user-pwd .move {
+    position: absolute;
+    top:0;
+    left: 10px;
+    padding: 14px 0;
+    font-size: 14px;
+    color: #000;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  .join-top .user-pwd input{
+    height: 15px;
+  }
+  
+.join-top .user-box input:focus ~ .move,
+.join-top .user-box input:valid ~ .move,
+.join-top .user-pwd input:focus ~ .move,
+.join-top .user-pwd input:valid ~ .move
+ {
+    top: -6px;
+    left: 10px;
+    color: #000;
+    font-size: 10px;
+}
+
+.user-pwd{
+    display: flex;
+    justify-content: center;
+}
+
+.hide{
+    width: 130px;
+}
+
+.join-top .user-pwd .hide button{
+    width: 130px;
+    height: 45px;
+    padding: 14px 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+    padding-right: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.notice{
+    width: 312px;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+  
+.submit{
+    width:312px;
+    height: 41px;
+    cursor: pointer;
+    background-color: #0597F2;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.contour{
+    width: 312px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.line{
+    width:120px;
+}
+
+/* 페이스북 */
+.facebook{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0866FF;
+    width:312px;
+    height: 41px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.facebook img{
+    margin: 0;
+    width: 20px;
+    height: 20px;;
+}
+
+.facebook-txt{
+    font-weight: 700;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.facebook a:visited{
+    color: #fff;
+}
+
+.login{
+    width: 400px;
+    height: 80px;
+    margin: 10px 0;
+    background-color: #fff;
+    border: 1px solid #D2D2D2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px #e1e1e1;
+}
+
+.txt{
+    text-align: center;
+}
+
+.txt-blue{
+    font-weight: 700;
+    color:#0095F6;
+}
+
+.txt-blue a:visited{
+    color:#0095F6;
+}
+
+.download{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.store{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.store img{
+    width: 130px;
+    margin-right: 8px;
+}
+
+.footer{
+    font-size: 15px;
+    margin-top: 35px;
+}
+
+.footer ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footer ul li{
+    margin-right: 10px;
+}
+
+.darkmode{
+    cursor: pointer;
+}
