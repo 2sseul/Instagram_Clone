@@ -72,29 +72,31 @@ let joinBox = document.querySelector('.join');
 darkmode.addEventListener('click', ()=> {
     if(!darkmodeOn){
         darkmodeOn = true;
+        darkmode.innerHTML = 'Darkmode';
         instaLogo.src = "./assets/images/logo-light.png";
         for(let i=0; i<changeTxt.length; i++){
             changeTxt[i].style.color='#000';
             changeTxt[i].style.color='#000';
         }
         backgrondColor.style.backgroundColor='#F2F2F2';
-        backgrondColor.style.transition='0.8s';
+        backgrondColor.style.transition='0.6s';
         loginBox.style.backgroundColor='#fff';
-        loginBox.style.transition='0.8s';
+        loginBox.style.transition='0.6s';
         joinBox.style.backgroundColor='#fff';
-        joinBox.style.transition='0.8s';
+        joinBox.style.transition='0.6s';
     }else{
         darkmodeOn = false;
+        darkmode.innerHTML = 'Lightmode';
         instaLogo.src = "./assets/images/logo-dark.png";
         for(let i=0; i<changeTxt.length; i++){
             changeTxt[i].style.color='#f1f3f5';
         }
         backgrondColor.style.backgroundColor='#121319';
-        backgrondColor.style.transition='0.8s';
+        backgrondColor.style.transition='0.6s';
         loginBox.style.backgroundColor='#1b1d25';
-        loginBox.style.transition='0.8s';
+        loginBox.style.transition='0.6s';
         joinBox.style.backgroundColor='#1b1d25';
-        joinBox.style.transition='0.8s';
+        joinBox.style.transition='0.6s';
 
     }
 })
