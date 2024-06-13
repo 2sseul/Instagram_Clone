@@ -20,6 +20,34 @@ pwd.addEventListener('focusout', ()=>{
     }
 })
 
+let pwdBtn = document.querySelector('.pwd-btn');
+
+pwd.addEventListener('keyup', ()=>{
+    console.log(pwd.value);
+    if(pwd.value.length > 0){
+        pwdBtn.style.visibility = "visible";
+        }else{
+            pwdBtnSee = false;
+            pwdBtn.style.visibility = "hidden";
+        }
+})
+
+let pwdBtnSee = false;
+
+pwdBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    console.log(pwdBtnSee);
+    if(!pwdBtnSee){
+        pwdBtnSee = true;
+        pwd.setAttribute("type", "text");
+        pwdBtn.innerHTML = '숨기기';
+    }else{
+        pwdBtnSee = false;
+        pwd.setAttribute("type", "password");
+        pwdBtn.innerHTML = '비밀번호 표시하기';
+    }
+})
+
 let loginBtn = document.querySelector('.submit');
 let loginForm = document.querySelector('.login-form');
 loginBtn.addEventListener('click', (e)=>{

@@ -41,25 +41,40 @@ a{
     margin: 25px;
 }
   
-.login-top .user-box {
+.login-top .user-box, .login-top .user-pwd {
     position: relative;
     width: 300px;
 }
   
-.login-top .user-box input {
-    width: 300px;
+.login-top .user-box input, .login-top .user-pwd input {
     padding: 22px 0 8px 10px;
     font-size: 13px;
     color: #000;
     margin-bottom: 10px;
-    border: none;
-    border: 1px solid #cdcdcd;
     border-radius: 3px;
     outline: none;
     background: transparent;
 }
+
+.login-top .user-box input{
+    width: 300px;
+    border: 1px solid #cdcdcd;
+}
+
+.login-top .user-pwd{
+    width: 310px;
+    height: 45px;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.login-top .user-pwd input{
+    border: none;
+}
+
  
-.login-top .user-box .move {
+.login-top .user-box .move, .login-top .user-pwd .move {
     position: absolute;
     top:0;
     left: 10px;
@@ -69,25 +84,43 @@ a{
     pointer-events: none;
     transition: .5s;
   }
+
+  .login-top .user-pwd input{
+    height: 15px;
+  }
   
 .login-top .user-box input:focus ~ .move,
-.login-top .user-box input:valid ~ .move {
-    top: -5px;
+.login-top .user-box input:valid ~ .move,
+.login-top .user-pwd input:focus ~ .move,
+.login-top .user-pwd input:valid ~ .move
+ {
+    top: -6px;
     left: 10px;
     color: #000;
     font-size: 10px;
 }
 
-.login-top .user-box .hide{
-    position: absolute;
-    top:0;
-    right: 10px;
+.user-pwd{
+    display: flex;
+    justify-content: center;
+}
+
+.hide{
+    width: 130px;
+}
+
+.login-top .user-pwd .hide button{
+    width: 130px;
+    height: 45px;
     padding: 14px 0;
     font-size: 14px;
-    color: #000;
-    pointer-events: none;
-    transition: .5s;
+    font-weight: 700;
+    text-align: right;
+    padding-right: 10px;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
+    visibility: hidden;
 }
   
 .submit{
