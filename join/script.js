@@ -8,11 +8,16 @@ let named = document.getElementById('name');
 let userName = document.getElementById('username');
 let pwd = document.getElementById('pwd');
 
+//이메일/휴대전화 정규식 추가
 email.addEventListener('focusout', ()=>{
-    if(email.value.length > 4){
+    let emailCheck = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    let phoneCheck = /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/;
+    if(emailCheck.test(email.value) == true || phoneCheck.test(email.value) == true){
         emailValue = true;
+        console.log(emailValue);
     }else{
         emailValue = false;
+        console.log(emailValue);
     }
     if(emailValue && pwdValue && nameValue && userNameValue){
         joinBtn.style.opacity = "1";
@@ -23,8 +28,10 @@ email.addEventListener('focusout', ()=>{
     }
 })
 
-named.addEventListener('keyup', ()=>{
-    if(named.value.length > 4){
+//이름 정규식 추가
+named.addEventListener('focusout', ()=>{
+    let nameCheck = /^[가-힣]+$/ ;
+    if(named.value.length >= 2 && nameCheck.test(named.value)){
         nameValue = true;
     }else{
         nameValue = false;
@@ -38,8 +45,10 @@ named.addEventListener('keyup', ()=>{
     }
 })
 
-userName.addEventListener('keyup', ()=>{
-    if(userName.value.length > 4){
+//유저이름 정규식 추가
+userName.addEventListener('focusout', ()=>{
+    let userNameChcek = /^[a-zA-Z0-9]+$/;
+    if(userNameChcek.test(userName.value) == true && userName.value.length > 5){
         userNameValue = true;
     }else{
         userNameValue = false;
@@ -55,8 +64,10 @@ userName.addEventListener('keyup', ()=>{
 
 let pwdBtn = document.querySelector('.pwd-btn');
 
+//비밀번호 정규식 추가
 pwd.addEventListener('keyup', ()=>{
-    if(pwd.value.length > 4){
+    let pwdCheck = /^[A-Za-z0-9]{5,12}$/;
+    if(pwdCheck.test(pwd.value) == true){
         pwdValue = true;
         pwdBtn.style.visibility = "visible";
     }else{
