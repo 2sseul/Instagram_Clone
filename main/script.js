@@ -95,12 +95,24 @@ function imgOnload(){
 
 window.onload = imgOnload();
 
-//sidebar 내 정보 반복해주기
+//sidebar내 추천 친구들 정보 반복해주기
 let sidebar = document.querySelector('.sidebar');
 function recommendLoad(){
     
 }
 
 //삭제 버튼 토글 뜨게 만들어야함.
+let mainToggle = document.querySelector('.fa-ellipsis');
+let isOpen = false;
+
+mainToggle.addEventListener('click', ()=>{
+    if(!isOpen){
+        isOpen = true;
+    }else{
+        isOpen = false;
+    }
+})
+//댓글 달면 등록되게 만들기.
+
 
 // 이미지 zoom 하는 코드 짜기 
