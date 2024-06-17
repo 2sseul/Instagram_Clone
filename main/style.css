@@ -29,15 +29,21 @@ header img{
     cursor: pointer;
 }
 
-main{
+.wrap{
     display: flex;
     justify-content: center;
+}
 
+main{
+    display: block;
+    align-items: center;
 }
 
 .main-content{
+    max-width: 500px;
     min-width: 500px;
-    height: 600px;
+    margin-bottom: 50px;
+    height: 680px;
     border: 1px solid #D2D2D2;
     border-radius: 5px;
     background-color: #fff;
@@ -76,8 +82,9 @@ main{
     cursor: pointer;
 }
 
-.pic{
+.main-pic img{
     width: 500px;
+    height: 400px;
     background-size: cover;
 }
 
@@ -101,17 +108,25 @@ main{
 .comment{
     font-size: 14px;
     width: 470px;
-    display: flex;
+    display: block;
     justify-content: space-between;
     margin: 0 15px;
 }
 
+.main-comment{
+    display: flex;
+    align-items: center;
+    margin:5px 0;
+}
+
 .comment-user-name{
+    width: 60px;
     font-weight: 700;
 }
 
 .comments{
-    width: 450px;
+    width: 380px;
+    padding-left: 10px;
     text-align: left;
 }
 
@@ -125,11 +140,12 @@ main{
 }
 
 .comment-form{
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-top: 1px solid #D2D2D2;
-    padding: 3px 15px;
+    padding: 0 15px;
 }
 
 .comment-form input{
@@ -140,6 +156,7 @@ main{
 }
 
 .comment-btn{
+    width: 50px;
     border: none;
     background-color: transparent;
     color: #0597F2;
@@ -154,4 +171,39 @@ main{
     border: 1px solid #D2D2D2;
     border-radius: 5px;
     background-color: #fff;
+}
+
+.my-profile{
+    height: 50px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.recommend-div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.recommend-txt{
+    font-size: 14px;
+    font-weight: 700;
+    color: #888888;
+}
+
+.recommend-btn{
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    cursor: pointer;
 }
